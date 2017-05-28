@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="gauge.js" ></script>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800">
+</canvas>
+<script type="text/javascript">
+window.config = 
+{
+	arrow : {
+		angle: 200,
+		width : 10,
+		backgroundColor : "#040"
+	},
+	form : {
+		angleFrom: 120,
+		angleTo: 420
+	},
+	scale:{
+		backgroundColor: "#ccf"
+	}
+};
+</script>
+<script	type="text/javascript">
+  
+  
+		window.gauge =new YourControl.Gauge(document.getElementById("myCanvas"));		
+		window.gauge.draw(window.config);
+	
+</script>
+	
+	
+
+<style>
+	#myCanvas{
+		width:600px;
+		height:600px;
+	}
+	#config td{
+		height:30px;
+		font-size:30px;
+	}
+	.val{
+	height:30px;
+	font-size:25px;
+	width:100px;}
+</style>
+<table id="config">
+<tr>
+<td>
+angle
+</td>
+<td>
+<input value="30" id="angle" class="val" />
+</td>
+</tr>
+</table>
+
+	<script type="text/javascript">
+ document
+ .getElementById("angle")
+ .addEventListener(
+	"keyup", 
+	function(){
+		var angle = document.getElementById("angle").value;
+		window.gauge.draw({
+			arrow : {angle: angle}
+		});
+	});	
+	
+	
+</script>
+
+</body>
+</html>

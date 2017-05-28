@@ -1,0 +1,14 @@
+{
+	arrow : {
+		angle: 100,
+		width : 10,
+		backgroundColor : "#0f0"
+	},
+	form : {
+		angleFrom: 120,
+		angleTo: 420
+	},
+	scale:{
+		backgroundColor: "#0cf"
+	}
+}
